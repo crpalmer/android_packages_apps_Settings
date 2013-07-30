@@ -589,7 +589,7 @@ public class SecuritySettings extends SettingsPreferenceFragment
         final long adminTimeout = (mDPM != null ? mDPM.getMaximumTimeToLock(null) : 0);
         final long displayTimeout = Math.max(0,
                 Settings.System.getInt(getContentResolver(), SCREEN_OFF_TIMEOUT, 0));
-        if (adminTimeout > 0) {
+        if (false && adminTimeout > 0) {
             // This setting is a slave to display timeout when a device policy is enforced.
             // As such, maxLockTimeout = adminTimeout - displayTimeout.
             // If there isn't enough time, shows "immediately" setting.
